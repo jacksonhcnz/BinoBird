@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "602008927907",
+    "firebase_url": "https://binobird-65096.firebaseio.com",
+    "project_id": "binobird-65096",
+    "storage_bucket": "binobird-65096.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602008927907:android:41977eec971208cad74916",
+        "android_client_info": {
+          "package_name": "nz.co.dgi.binobird"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602008927907-q3picai0u6m7ov0696j4tte87c1bk9iv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC93LTt-ALE-UgoWpvJbDT2Th1cNvAHCGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602008927907-q3picai0u6m7ov0696j4tte87c1bk9iv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
