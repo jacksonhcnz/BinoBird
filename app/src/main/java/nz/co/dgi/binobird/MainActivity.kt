@@ -23,5 +23,21 @@ class MainActivity : AppCompatActivity() {
             spinner.adapter = adapter
         }
 
+        // Access a Cloud Firestore instance from your Activity
+        val db = Firebase.firestore
+
+        val docRef = db.collection("birds").document("40cDhfc1dnUtAgsY0GDP")
+        docRef.get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                } else {
+                    Log.d(TAG, "No such document")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d(TAG, "get failed with ", exception)
+            }
+
     }
 }
