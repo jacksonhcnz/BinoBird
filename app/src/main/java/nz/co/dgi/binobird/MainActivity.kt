@@ -9,6 +9,9 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        private val TAG = "dbread"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         // Access a Cloud Firestore instance from your Activity
         val db = Firebase.firestore
 
-        val docRef = db.collection("birds").document("40cDhfc1dnUtAgsY0GDP")
+        val docRef = db.collection("birds").document("4OcDhfc1dnUtAgsY0GDP")
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
