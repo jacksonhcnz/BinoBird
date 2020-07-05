@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         // Access a Cloud Firestore instance from your Activity
         val db = Firebase.firestore
 
-        val docRef = db.collection("birds").document("4OcDhfc1dnUtAgsY0GDP")
+        /*val docRef = db.collection("birds").document("4OcDhfc1dnUtAgsY0GDP")
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
@@ -43,6 +43,19 @@ class MainActivity : AppCompatActivity() {
             }
             .addOnFailureListener { exception ->
                 Log.d(TAG, "get failed with ", exception)
+            }
+*/
+
+        db.collection("birds")
+            .whereEqualTo("species", true)
+            .get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    Log.d(TAG, "${document.id} => ${document.data}")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents: ", exception)
             }
 
     }
